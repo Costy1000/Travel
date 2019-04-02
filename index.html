@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	  <title>Travel</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" type="text/css" href="main.css">
+	    <script
+  src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"
+  integrity="sha256-0vBSIAi/8FxkNOSKyPEfdGQzFDak1dlqFKBYqBp1yC4="
+  crossorigin="anonymous"></script>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	   <link href="https://fonts.googleapis.com/css?family=Asap:400,500,600" rel="stylesheet">
+	   <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet">
+	  
+	  <script src="script.js"></script>
+	  <script src="velocity.js"></script>
+	  <script src="ui.js"></script>
+</head>
+<body>
+  <div id="header">
+   <div class="background-black">
+   <div class="a-absolute">
+	<a class="carousel-control-prev" href="#demo" data-slide="prev">
+         <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a> 
+	</div>
+	<div id="demo"  class="carousel slide" data-ride="carousel" interval-false="900">
+	  <div class="carousel-inner">
+	   <div class="carousel-item active">
+		<img src="assets/Rome.jpg" alt="Rome">
+		<div class="p-container  " >
+		   <p  >Rome</p>
+		</div>
+		
+	   </div>
+	   <div class="carousel-item">
+		<img src="assets/Cairo.jpg" alt="Cairo">
+		<div class="p-container " >
+		   <p >Cairo</p>
+		</div>
+	   </div>
+	    <div class="carousel-item">
+		 <img src="assets/London.jpg" alt="London">
+		 <div class="p-container  " >
+		   <p >London</p>
+		 </div>
+	    </div>
+		<div class="carousel-item">
+		  <img src="assets/New-York.jpeg" alt="New-York">
+		   <div class="p-container " >
+		   <p >New-York</p>
+		 </div>
+	    </div>
+	  </div>
+	  
+	</div>
+	
+	  <div class="topnav">
+		 <div class="topnav-logo">
+			<img src="assets/earth.png" alt="earth">
+			 
+		 </div>
+		 <div class="content-bar"  >
+	            <div class="bar1"></div> 
+	            <div class="bar2"></div>
+	            <div class="bar3"></div> 
+	      </div>
+		 <div  class="topnav-links " >
+			 
+	     <span  class="close">&times;</span>	  
+	     <div class="wrapper-right">
+		  
+		  <div class="destination" onmouseleave="hideOpacity('destination-sub')" > <a href="#" onmouseover="showOpacity('destination-sub')" >Destinations</a>
+			 <div class="destination-sub">
+			  <ul>
+				<li>London</li>
+				<li>Paris</li>
+				<li>New-York</li>
+				<li>Cairo</li>
+			   </ul>
+			   <ul>
+				<li>Rome</li>
+				<li>Los Angeles</li>
+				<li>Sao Paolo</li>
+				<li>Tokyo</li>
+			   </ul>
+			   <ul>
+				 <li>Oslo</li>
+				 <li>Ottawa</li>
+				 <li>Beijing</li>
+				 <li>Canberra</li>
+			   </ul>
+			    <ul>
+				 <li>Antananarivo</li>
+				 <li>Pretoria</li>
+				 <li>Sidney</li>
+				 <li class="pointer">More...</li>
+			   </ul>
+			   
+			 </div>
+		   </div>
+		   <div class="prices" onmouseleave= "hideOpacity('prices-sub')">
+			 <a href="#" onmouseover= "showOpacity('prices-sub')">Prices</a>
+			 <div class="prices-sub">
+				 <ul>
+				   <li>London: 400$</li>
+				   <li>Cairo: 500$</li>
+				   <li>Los-Angeles: 1500$</li>
+				   <li>Rome: 300$</li> 
+				 </ul>
+				 <ul>
+				   <li>Oslo: 600$</li>
+				   <li>Antananarivo: 800$</li>
+				   <li>New-York: 1500$</li>
+				   <li>More...</li>  
+				 </ul>
+			 </div>
+		   </div>
+		   <div class="contact" onmouseleave= "hideOpacity('contact-sub')">
+			 <a href="#"  onmouseover= "showOpacity('contact-sub')">Contact</a>
+			 <div class="contact-sub">
+				 <ul>
+					 <li>travelaroundtheWorld@gmail.com</li>
+				 </ul>
+			 </div>
+		   </div>
+		   <div class="input">
+			 <input type="text" class="input-cities"> 
+			 <i class="fas fa-search"></i>
+			</div> 
+			<div class="cities-filter">
+				<ul>
+					<li><img src="assets/Rome.jpg" alt="Rome"><span>Rome</span></li>
+					<li><img src="assets/Cairo.jpg" alt="Cairo"><span>Cairo</span></li>
+					<li><img src="assets/London.jpg" alt="London"><span>London</span></li>
+				</ul>
+				<h4>No result was found</h4>
+			</div>
+		 </div>
+	    </div> 
+		<div  class="topnav-links2 " >
+			 
+	     <span  class="close">&times;</span>	  
+	     <div class="wrapper-right">
+		  
+		  <div class="destination" > <a href="#"  >Destinations</a>
+			 
+		   </div>
+		   <div class="prices">
+			 <a href="#" >Prices</a>
+			 
+		   </div>
+		   <div class="contact" >
+			 <a href="#"  >Contact</a>
+			
+		   </div>
+		   <div class="input">
+			 <input type="text" class="input-cities"> 
+			 <i class="fas fa-search"></i>
+			</div> 
+			
+		 </div>
+	    </div>   
+	  </div>
+   </div>
+   
+  </div>
+  <div class="main">
+	 <div class="around-world">
+		 <div class="background-black">
+		  
+			 <div class="continents">
+			 
+			 
+				 <div class="europe continents-intro">
+				 
+					 <h4>Europe</h4>
+					 <p>Over 200 cities</p>
+					 <button>Check Out</button>
+				  
+				 </div>
+				  <div class="America continents-intro">
+					 <h4>America</h4>
+					 <p>Over 100 cities</p>
+					 <button>Check Out</button>
+				 </div>
+				 <div class="Asia continents-intro ">
+					 <h4>Asia</h4>
+					 <p>Over 120 cities</p>
+					 <button>Check Out</button>
+				 </div>
+			
+			
+            
+				  <div class="Africa continents-intro">
+					 <h4>Africa</h4>
+					 <p>Over 20 cities</p>
+					 <button>Check Out</button>
+				 </div>
+				 <div class="Australia continents-intro">
+					 <h4>Australia</h4>
+					 <p>Over 20 cities</p>
+					 <button>Check Out</button>
+				 </div>
+			
+			 </div>
+		 </div>
+	 </div>
+	 <div class="destination-wrapper">
+		 <div class="background-blue">
+		 <div class="destination-wrapper2">
+		 <div class="flex-container">
+		   <div class="destination-city">
+		  <div class="container-img">
+			<img src="assets/London2.jpg" alt="London">
+			  <div class= "city-description" >
+				 <h5>London</h5>
+			  </div>
+		      
+		      
+		  </div>
+			 
+			<p>Prices start at 450$</p>
+			<button >More..</button>
+		</div>
+	    <div class="destination-city">
+		  <div class="container-img">
+			<img src="assets/Rome.jpg" alt="Rome">
+			  <div class= "city-description" >
+				<h5>Rome</h5> 
+			  </div>
+		       
+		      
+		  </div>
+			
+			<p>Prices start at 350$</p>
+			<button >More..</button>
+		</div>
+		 <div class="destination-city">
+		  <div class="container-img">
+			<img src="assets/Lisabona.jpg" alt="Lisbon">
+			  <div class= "city-description" >
+				 <h5>Lisbon</h5>
+			  </div>
+		       
+		      
+		  </div>
+			
+			<p>Prices start at 350$</p>
+			<button >More..</button>
+		</div>
+		<div class="destination-city">
+		  <div class="container-img">
+			<img src="assets/Tokyo.jpg" alt="Tokyo">
+			  <div class= "city-description" >
+				 <h5>Tokyo</h5>
+			  </div>
+		       
+		      
+		  </div>
+			
+			<p>Prices start at 1700$</p>
+			<button >More..</button>
+		</div>
+		<div class="destination-city">
+		  <div class="container-img">
+			<img src="assets/Athens.jpg" alt="Athens">
+			  <div class= "city-description" >
+				<h5>Athens</h5> 
+			  </div>
+		       
+		      
+		  </div>
+			
+			<p>Prices start at 300$</p>
+			<button >More..</button>
+		</div>
+		<div class="destination-city">
+		  <div class="container-img">
+			<img src="assets/Sao-Paulo.jpg" alt="Sao-Paulo">
+			  <div class= "city-description" >
+				 <h5>Sao-Paulo</h5>
+			  </div>
+		       
+		      
+		  </div>
+			
+			<p>Prices start at 1200$</p>
+			<button >More..</button>
+		</div>
+		<div class="destination-city">
+		  <div class="container-img">
+			<img src="assets/Cairo2.jpg" alt="Cairo2">
+			  <div class= "city-description" >
+				 <h5>Cairo</h5>
+			  </div>
+		       
+		      
+		  </div>
+			
+			<p>Prices start at 1000$</p>
+			<button >More..</button>
+		</div>
+		<div class="destination-city">
+		  <div class="container-img">
+			<img src="assets/Sydnei.jpg" alt="Sydnei">
+			  <div class= "city-description" >
+				 <h5>Sydney</h5>
+			  </div>
+		       
+		      
+		  </div>
+			
+			<p>Prices start at 1800$</p>
+			<button >More..</button>
+		</div>
+		<div class="destination-city">
+		  <div class="container-img">
+			<img src="assets/Toronto.jpg" alt="Toronto">
+			  <div class= "city-description" >
+				 <h5>Toronto</h5>
+			  </div>
+		       
+		      
+		  </div>
+			
+			<p>Prices start at 1600$</p>
+			<button >More..</button>
+		</div>
+		
+	   
+	  </div>
+		 </div>
+	 </div>
+  </div>
+  <div class="skew-wrapper">
+	<div class="background-black" style="z-index: 1">
+	 
+	  <div class="first-skew ">
+		  
+			<img src="assets/skew-black.png" alt="skew-black">
+		    
+		 <div class="button-h4 button-h4-left">
+			 <h4 class="h4-skew">Special Offers</h4>
+		    <button class="button-skew   ">Check Out</button> 
+		  
+		 </div>
+		
+	  </div>
+	  
+	   <div class="second-skew">
+		  <img src="assets/skew2-black.png" alt="skew2-black">
+		<div class="button-h4 button-h4-right " > 
+		   <h4 class="h4-skew">The most searched cities</h4>
+		  <button class="button-skew ">Check Out</button>
+			
+		 
+		</div>
+		
+	  </div>
+	   <div class="first-skew-phones ">
+		  
+			
+		    
+		 <div class="button-h4">
+			 <h4 class="h4-skew">Special Offers</h4>
+		    <button class="button-skew   ">Check Out</button> 
+		  
+		 </div>
+		
+	  </div>
+	  
+	   <div class="second-skew-phones">
+		<div class="button-h4 "> 
+		   <h4 class="h4-skew">The most searched cities</h4>
+		  <button class="button-skew ">Check Out</button>
+			
+		 
+		</div>
+		
+	  </div>
+	</div>
+  </div>
+  
+	</div>
+    <div class="footer">
+		<div class="footer-black ">
+			<div class="follow-us">
+				<h4>Follow Us</h4>
+				<ul>
+				   <li><img src="assets/facebook.png" alt="facebook"></li>
+				   <li><img src="assets/instagram.png" alt="instagram"></li>
+				   <li><img src="assets/twitter.png" alt="twitter"></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<p>&copy; Travel.ro. All rights reserved</p>
+			</div>
+		</div>
+    </div>
+	<div class="chat-logo">
+		<i class="fas fa-comments"></i>
+		<span class="one">1</span>
+		<i class="far fa-times-circle" id="x-none" ></i>
+	</div>
+	<div class="chat-box">
+		<div class="first-part">
+			<div class="user-profile">
+				<i class="fas fa-user"></i>
+			</div>
+			<div class="name"><h5>Mihai</h5></div>
+			<div class="close-chat"><span  >&times;</span></div>
+		</div>
+		<div class="second-part">
+			<div class="container-message">
+				<div class="user-profile user-profile-left">
+				   		<i class="fas fa-user fa-user-small" ></i>
+				</div>
+				
+				<div class="user-message">
+					<p>Hi, I am Mihai, if you have a question ask me </p>
+				</div>
+				
+			</div>
+			
+		</div>
+		<div class="third-part">
+				<div class="textarea">
+			      <textarea  placeholder="Send a message"></textarea>
+			    </div>
+			    <div class="send-message">
+				  <i class="fas fa-paper-plane"></i>	
+			    </div>
+		</div>
+	</div>
+	
+	<script>
+	
+	
+	  /*==============================================nav-bar===============================================*/
+		
+		
+		$('.content-bar').click(function(){
+			$(".topnav-links2").addClass("topnav-links2-toggle")
+		});
+
+     $('.close').click(function(){	
+		$('.topnav-links2').removeClass("topnav-links2-toggle")
+		
+		
+		
+	});
+	  
+		$(window).scroll(function(){ 
+		  
+			
+       if($(window).scrollTop() >  1203){
+						 
+			 $('.first-skew').velocity({ left:    -1 +   '%'}, {duration: 1000,  easing: "easeOutExpo"});
+		      $('.second-skew').velocity({ right:   -1 +   '%'}, {duration: 1000, easing: "easeOutExpo" }); 
+		      $('.button-h4-left').velocity({ left:    20 +   '%', opacity: 1}, {duration: 1000,  easing: "easeOutExpo", delay: 1000});
+		       $('.button-h4-right').velocity({ right:   20 +   '%', opacity: 1}, {duration: 1000,  easing: "easeOutExpo", delay: 1000});  
+		      $('.button-skew').velocity({  opacity: 1}, {duration: 1000,  easing: "easeOutExpo", delay: 1000}); 
+		      $('.h4-skew').velocity({  opacity: 1}, {duration: 1000,  easing: "easeOutExpo", delay: 1500}); 
+			
+           
+	   }
+		 if($(window).scrollTop() >  0){	
+		 $('.topnav-logo').addClass("rotate");
+		 }
+			if($(window).scrollTop() ==  0){
+				$('.topnav-logo').removeClass("rotate");
+			}
+		});
+		
+         
+	 
+     $('.send-message').click(function(){	
+	
+		if( $('textarea').val().length > 0 ){
+		var containerMessage = document.createElement("div");
+		 containerMessage.setAttribute("class", "container-message");
+		 var userMessage =  document.createElement("div");
+		 userMessage.setAttribute("class", "user-message2")
+		 var p = document.createElement("p");
+		 
+		 p.innerHTML = $("textarea").val();
+		 userMessage.append(p);
+		 /*===========================================user-profile=============================================*/
+		 var userProfile = document.createElement("div");
+		  userProfile.setAttribute("class", " user-profile user-profile-right")
+		  var i = document.createElement('i')
+		   i.setAttribute("class", "fas fa-user fa-user-small")
+		   userProfile.append(i);
+		  containerMessage.append(  userProfile, userMessage); 
+	
+		  
+		 $(".second-part").append(containerMessage);
+		$("textarea").val("");
+			/*=======================================================SaveDATA=======================================================*/
+		
+		
+		}
+	});
+		
+	  
+		
+	$('.chat-logo').click(function(){	
+		
+		$('.chat-box').toggleClass("chat-box-block");
+	  if($(window).width() >= 500 && $(window).height() >= 500){
+	    $('.fa-comments').toggleClass("display-none");
+		
+		$('.fa-times-circle').toggleClass("display-block");
+	  }
+	    $('.one').css({'display': 'none'});
+		 
+		  
+		
+	});
+	 $('.close-chat').click(function(){	
+		
+		$('.chat-box-block').removeClass("chat-box-block");
+		
+	   
+		
+	});
+	$('.input-cities').on("keyup", function(){
+		var value = $(this).val().toLowerCase().charAt(0);
+		$(".cities-filter li").filter(function(){
+			 $(this).toggle($(this).text().toLowerCase().charAt(0).indexOf(value) > -1);
+			   $('.cities-filter h4').css({'display': 'none'});
+           if( $(".input-cities").val().length == 0){
+			    $(".cities-filter ").css({'display': 'none'});
+			   
+		   } else{
+			   $(".cities-filter ").css({'display': 'block'});
+		   }
+			 if($(".cities-filter li").text().toLowerCase().indexOf(value) == -1){
+        $('.cities-filter h4').css({'display': 'block'});
+       
+    }
+      
+    });
+		});
+	
+	 
+</script>
+<script>
+	 	
+</script>
+</body>
+
+</html>
