@@ -435,7 +435,7 @@
 		</div>
 		<div class="third-part">
 				<div class="textarea">
-			      <textarea  placeholder="Send a message"></textarea>
+			      <textarea  class="chat-textarea" placeholder="Send a message"></textarea>
 			    </div>
 			    <div class="send-message">
 				  <i class="fas fa-paper-plane"></i>	
@@ -484,7 +484,7 @@
 		
          
 	 
-     $('.send-message').click(function(){	
+     /*$('.send-message').click(function(){	
 	
 		if( $('textarea').val().length > 0 ){
 		var containerMessage = document.createElement("div");
@@ -495,7 +495,7 @@
 		 
 		 p.innerHTML = $("textarea").val();
 		 userMessage.append(p);
-		 /*===========================================user-profile=============================================*/
+		
 		 var userProfile = document.createElement("div");
 		  userProfile.setAttribute("class", " user-profile user-profile-right")
 		  var i = document.createElement('i')
@@ -506,13 +506,86 @@
 		  
 		 $(".second-part").append(containerMessage);
 		$("textarea").val("");
-			/*=======================================================SaveDATA=======================================================*/
+			
 		
 		
 		}
-	});
+	});*/
+	 var secHeight = 343;
+	  $('.chat-textarea').on('keypress',(function(event){
 		
+	     var keycode = event.which;
+		  if(keycode == 13 ){
+		 
+		if($('.chat-textarea').val().length > 0 && $('.chat-textarea').val() !=  + " "){
+			
+		  	var secTotal = secHeight += secHeight;
+		 $('.second-part').animate({scrollTop:  secTotal});	
+		var containerMessage = document.createElement("div");
+	
+		 containerMessage.setAttribute("class", "container-message");
+		 var userMessage =  document.createElement("div");
+		 userMessage.setAttribute("class", "user-message2")
+		 var p = document.createElement("p");
+		 
+		 p.innerHTML = $("textarea").val();
+		 userMessage.append(p);
+		
+		 var userProfile = document.createElement("div");
+		  userProfile.setAttribute("class", " user-profile user-profile-right")
+		  var i = document.createElement('i')
+		   i.setAttribute("class", "fas fa-user fa-user-small")
+		   userProfile.append(i);
+		  containerMessage.append(  userProfile, userMessage); 
+	
+		  
+		 $(".second-part").append(containerMessage);
+		$("textarea").val("");
+		}
+		}
+		
+	  }
+		
+	  ))
+	 
 	  
+		
+	 $('.send-message').on('click',(function(){
+		
+	   	
+		if( $('.chat-textarea').val().length > 0 && $('.chat-textarea').val() !=  + " " ){
+		  	var secTotal = secHeight += secHeight;
+		 
+		 $('.second-part').animate({scrollTop:  secTotal});
+		var containerMessage = document.createElement("div");
+		 containerMessage.setAttribute("class", "container-message");
+		 var userMessage =  document.createElement("div");
+		 userMessage.setAttribute("class", "user-message2")
+		 var p = document.createElement("p");
+		
+		 p.innerHTML = $("textarea").val();
+		 userMessage.append(p);
+		
+		 var userProfile = document.createElement("div");
+		  userProfile.setAttribute("class", " user-profile user-profile-right")
+		  var i = document.createElement('i')
+		   i.setAttribute("class", "fas fa-user fa-user-small")
+		   userProfile.append(i);
+		  containerMessage.append(  userProfile, userMessage); 
+	
+		  
+		 $(".second-part").append(containerMessage);
+		$("textarea").val("");
+		}
+		
+		
+		}
+	  
+		)
+	);
+				 			 
+		
+	 
 		
 	$('.chat-logo').click(function(){	
 		
@@ -545,13 +618,14 @@
 		   } else{
 			   $(".cities-filter ").css({'display': 'block'});
 		   }
-			 if($(".cities-filter li").text().toLowerCase().indexOf(value) == -1){
+			 if($(".cities-filter span").text().toLowerCase().indexOf(value) == -1){
         $('.cities-filter h4').css({'display': 'block'});
        
     }
       
     });
 		});
+		
 	
 	 
 </script>
